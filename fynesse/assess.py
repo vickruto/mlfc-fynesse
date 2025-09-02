@@ -4,7 +4,6 @@ import math
 import osmnx as ox
 import pandas as pd
 import logging
-import math
 import yaml
 import os
 
@@ -142,28 +141,30 @@ def get_box(latitude, longitude, box_size_km=2):
 
 def load_default_tags():
     # Open the YAML file and load it
-    defaults_file_path = os.path.join(os.path.dirname(__file__), 'defaults.yml')
+    defaults_file_path = os.path.join(os.path.dirname(__file__), "defaults.yml")
     print(defaults_file_path)
-    with open(defaults_file_path, 'r') as file:
+    with open(defaults_file_path, "r") as file:
         config = yaml.safe_load(file)
 
     # Access the DEFAULT_TAGS
-    default_tags = config['DEFAULT_TAGS']
+    default_tags = config["DEFAULT_TAGS"]
     return default_tags
+
 
 def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None):
     """
-    show a matplotlib plot of features around place_name centered at (latitude, longitude) with bounding box dimensions box_size_km*box_size_km
-    args: 
+    show a matplotlib plot of features around place_name centered at (latitude, longitude), \
+        with bounding box dimensions box_size_km*box_size_km
+    args:
         place_name:str eg 'Nyeri, Kenya'
         latitude: latitude of place_name in degrees
-        box_size_km: int/float: 
+        box_size_km: int/float:
         poi_tags: features to plot in the map
     returns: None
     """
     if not poi_tags:
         poi_tags = load_default_tags()
-    placestub = place_name.lower().replace(' ', '-').replace(',','')
+    # placestub = place_name.lower().replace(" ", "-").replace(",", "")
     bbox = get_box(latitude, longitude, box_size_km=box_size_km)
     west, south, east, north = bbox
     pois = ox.features_from_bbox(bbox, poi_tags)
@@ -177,7 +178,7 @@ def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None)
     # Buildings
     buildings = ox.features_from_bbox(bbox, tags={"building": True})
 
-    fig, ax = plt.subplots(figsize=(6,6))
+    fig, ax = plt.subplots(figsize=(6, 6))
     area.plot(ax=ax, color="tan", alpha=0.5)
     buildings.plot(ax=ax, facecolor="gray", edgecolor="gray")
     edges.plot(ax=ax, linewidth=1, edgecolor="black", alpha=0.3)
