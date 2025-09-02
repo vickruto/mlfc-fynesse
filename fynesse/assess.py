@@ -4,6 +4,9 @@ import math
 import osmnx as ox
 import pandas as pd
 import logging
+import math
+import yaml
+import os
 
 from .config import *
 from . import access
@@ -136,6 +139,18 @@ def get_box(latitude, longitude, box_size_km=2):
     bbox = (west, south, east, north)
     return bbox
 
+
+def load_default_tags():
+    # Open the YAML file and load it
+    defaults_file_path = os.path.join(os.path.dirname(__file__), 'defaults.yml')
+    print(defaults_file_path)
+    with open(defaults_file_path, 'r') as file:
+        config = yaml.safe_load(file)
+
+    # Access the DEFAULT_TAGS
+    default_tags = config['DEFAULT_TAGS']
+    return default_tags
+
 def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None):
     """
     show a matplotlib plot of features around place_name centered at (latitude, longitude) with bounding box dimensions box_size_km*box_size_km
@@ -146,6 +161,8 @@ def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None)
         poi_tags: features to plot in the map
     returns: None
     """
+    if not poi_tags:
+        poi_tags = load_default_tags()
     placestub = place_name.lower().replace(' ', '-').replace(',','')
     bbox = get_box(latitude, longitude, box_size_km=box_size_km)
     west, south, east, north = bbox
