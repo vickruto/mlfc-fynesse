@@ -1,4 +1,6 @@
 from typing import Any, Union
+import matplotlib.pyplot as plt
+import osmnx as ox
 import pandas as pd
 import logging
 
@@ -111,3 +113,59 @@ def view(data: Union[pd.DataFrame, Any]) -> None:
 def labelled(data: Union[pd.DataFrame, Any]) -> Union[pd.DataFrame, Any]:
     """Provide a labelled set of data ready for supervised learning."""
     raise NotImplementedError
+
+
+def get_box(latitude, longitude, box_size_km=2):
+    """
+    args:
+        latitude in degrees
+        longitude in degrees
+
+    returns:
+        bounding box coordinates (west, south, east, north) in degrees
+    """
+    lat_degree_km = 111.0
+    lon_degree_km = 111.0 * math.cos(math.radians(latitude))
+    box_height_deg = box_size_km / lat_degree_km
+    box_width_deg = box_size_km / lon_degree_km
+    north = latitude + box_height_deg / 2
+    south = latitude - box_height_deg / 2
+    east = longitude + box_width_deg / 2
+    west = longitude - box_width_deg / 2
+    bbox = (west, south, east, north)
+    return bbox
+
+def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None):
+    """
+    show a matplotlib plot of features around place_name centered at (latitude, longitude) with bounding box dimensions box_size_km*box_size_km
+    args: 
+        place_name:str eg 'Nyeri, Kenya'
+        latitude: latitude of place_name in degrees
+        box_size_km: int/float: 
+        poi_tags: features to plot in the map
+    returns: None
+    """
+    placestub = place_name.lower().replace(' ', '-').replace(',','')
+    bbox = get_box(latitude, longitude, box_size_km=box_size_km)
+    west, south, east, north = bbox
+    pois = ox.features_from_bbox(bbox, tags)
+
+    # Get graph from location
+    graph = ox.graph_from_bbox(bbox)
+    # City area
+    area = ox.geocode_to_gdf(place_name)
+    # Street network
+    nodes, edges = ox.graph_to_gdfs(graph)
+    # Buildings
+    buildings = ox.features_from_bbox(bbox, tags={"building": True})
+
+    fig, ax = plt.subplots(figsize=(6,6))
+    area.plot(ax=ax, color="tan", alpha=0.5)
+    buildings.plot(ax=ax, facecolor="gray", edgecolor="gray")
+    edges.plot(ax=ax, linewidth=1, edgecolor="black", alpha=0.3)
+    nodes.plot(ax=ax, color="black", markersize=1, alpha=0.3)
+    pois.plot(ax=ax, color="green", markersize=5, alpha=1)
+    ax.set_xlim(west, east)
+    ax.set_ylim(south, north)
+    ax.set_title(place_name, fontsize=14)
+    plt.show()
