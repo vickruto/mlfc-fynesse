@@ -1,5 +1,6 @@
 from typing import Any, Union
 import matplotlib.pyplot as plt
+import math
 import osmnx as ox
 import pandas as pd
 import logging
@@ -148,7 +149,7 @@ def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None)
     placestub = place_name.lower().replace(' ', '-').replace(',','')
     bbox = get_box(latitude, longitude, box_size_km=box_size_km)
     west, south, east, north = bbox
-    pois = ox.features_from_bbox(bbox, tags)
+    pois = ox.features_from_bbox(bbox, poi_tags)
 
     # Get graph from location
     graph = ox.graph_from_bbox(bbox)

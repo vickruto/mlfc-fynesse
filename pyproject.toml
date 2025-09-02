@@ -28,10 +28,11 @@ include = ["fynesse/defaults.yml"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^2.0.0"
-numpy = "^1.24.0"
+numpy = "^2.0.2"
 jupyter = "^1.0.0"
 matplotlib = "^3.7.0"
 PyYAML = "^6.0.0"
+osmnx = "^2.0.6"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
