@@ -12,12 +12,14 @@ The course is instructed by DeepMind Professor of Machine Learning [Neil Lawrenc
 
 ## Lectures:
 
-| |Topic|Notes|Notebook(Nbviewer) | Colab |Slides|Date
-|-|-----|-----|-------------------|-------|------|-----
-1 |Probability|https://mlatcl.github.io/mlfc/lectures/01-01-probability.html | https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb | https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb | https://mlatcl.github.io/mlfc/slides/01-01-probability.slides.html | 2025-09-01 | 
-2 | Narratives, Science and Data | https://mlatcl.github.io/mlfc/lectures/01-02-data-science-intro.html | | | https://mlatcl.github.io/mlfc/slides/01-02-data-science-intro.slides.html| 2025-09-02 | 
-3 | Objective Functions and Gradient Descent| https://mlatcl.github.io/mlfc/lectures/01-03-objective-functions-and-gradient-descent.html | https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb | https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb | https://mlatcl.github.io/mlfc/slides/01-03-objective-functions-and-gradient-descent.slides.html | 2025-09-03 | 
-4 | Linear Algebra and Linear Regression | https://mlatcl.github.io/mlfc/lectures/02-01-linear-algebra.html | https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb | https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb | https://mlatcl.github.io/mlfc/slides/02-01-linear-algebra.slides.html | 2025-09-08 |
+
+| # | Topic | Notes | Notebook | Colab | Slides | Date |
+|---|-------|-------|---------|-------|--------|------|
+| 1 | Probability | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-01-probability.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-01-probability.slides.html) | 2025-09-01 |
+| 2 | Narratives, Science and Data | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-02-data-science-intro.html) | - | - | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-02-data-science-intro.slides.html) | 2025-09-02 |
+| 3 | Objective Functions and Gradient Descent | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-03-objective-functions-and-gradient-descent.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-03-objective-functions-and-gradient-descent.slides.html) | 2025-09-03 |
+| 4 | Linear Algebra and Linear Regression | [Lecture](https://mlatcl.github.io/mlfc/lectures/02-01-linear-algebra.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/02-01-linear-algebra.slides.html) | 2025-09-08 |
+
 
 ## Practicals: 
 
