@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-This repository contains code from the Machine Learning Foundations Course ongoing in September 2025. 
+This repository contains material provided and code written during the Machine Learning Foundations Course ongoing in September 2025. 
 The course is instructed by DeepMind Professor of Machine Learning [Neil Lawrence](https://www.cst.cam.ac.uk/people/ndl21) and author of [Atomic Human](https://www.cst.cam.ac.uk/news/atomic-human-understanding-ourselves-age-ai), [@lawrenned](https://github.com/lawrennd/) ; and [Radzim Sendyka](https://science.ai.cam.ac.uk/team/radzim-sendyka), [@radzim](https://github.com/radzim), both from University of Cambridge. 
 
 ## Lectures:
@@ -41,6 +41,21 @@ The Fynesse paradigm is inspired by experience in operational data science both 
 The Fynesse paradigm considers three aspects to data analysis, Access, Assess, Address.
 
 
+### Fynesse Paradigm Aspects
+The Fynesse paradigm considers three aspects to data analysis, `Access`, `Assess`, `Address`.
+
+#### Access
+Ensuring you can obtain and legally use the data. This includes overcoming technical barriers (distributed systems, obscure APIs, digitization challenges) and legal barriers (IP rights, licensing, privacy). Proper access also requires documenting provenance and managing data ecosystems in a structured way.
+
+
+#### Assess
+Understanding the nature and quality of the data before analysis. This involves checking for missing values, outliers, encodings, and overall reliability—without tailoring to a specific question. The goal is to make repeatable, context-agnostic assessments that others can reuse.
+
+
+#### Address
+Applying the data to the actual question or problem. This may involve building predictive models, statistical analyses, or creating visualizations and dashboards. It’s the most familiar step to researchers, as it’s where insights are derived and communicated.
+
+
 ### Framework Structure
 
 The template provides a structured approach to implementing the Fynesse framework:
@@ -68,7 +83,7 @@ fynesse/
 - *Documentation*: Enhanced docstrings and module documentation 
 
 
-## Seting Up
+## Setting Up
 
 ### Prerequisites
 - Python 3.9 or higher
@@ -98,6 +113,7 @@ cd mlfc-fynesse
 # Install dependencies
 make install
 ```
+
 </details> 
 
 
@@ -174,14 +190,17 @@ poetry run flake8 fynesse/
 ```
 </details>
 
+
 ##### Adding Dependencies
 To add a dependency (eg pandas):
 
 ```bash
 # To add a dependency (eg pandas):
 poetry add pandas
-poetry add pandas # If you only need it for development
 
+or 
+
+poetry add pandas --group dev # If you only need it for development
 ```
 
-The commands above will update the `pyproject.toml` with the latest version of the dependency requested that does not cause a dependency conflict with the already added dependencies. 
+The commands above will update the `pyproject.toml` with the latest version of the dependency requested that does not cause a dependency conflict with the already added dependencies. It also automatically updates the lockfile `poetry.lock` ensuring that the analysis is reproducible in any system. 
