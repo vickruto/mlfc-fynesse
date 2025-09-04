@@ -118,7 +118,9 @@ def labelled(data: Union[pd.DataFrame, Any]) -> Union[pd.DataFrame, Any]:
     raise NotImplementedError
 
 
-def get_box(latitude:float, longitude:float, box_size_km:Union[float, int]=2) -> Tuple[float, float, float, float]:
+def get_box(
+    latitude: float, longitude: float, box_size_km: Union[float, int] = 2
+) -> Tuple[float, float, float, float]:
     """
     args:
         latitude in degrees
@@ -138,6 +140,7 @@ def get_box(latitude:float, longitude:float, box_size_km:Union[float, int]=2) ->
     bbox = (west, south, east, north)
     return bbox
 
+
 def load_default_tags() -> Dict[str, Union[bool, str, list[str]]]:
     # Open the Defaults YAML file and load it
     defaults_file_path = os.path.join(os.path.dirname(__file__), "defaults.yml")
@@ -150,15 +153,13 @@ def load_default_tags() -> Dict[str, Union[bool, str, list[str]]]:
     return default_tags
 
 
-# def plot_city_map(place_name:str, latitude:float, longitude:float, box_size_km:Union[float, int]=2, poi_tags:Dict=None) -> None:
 def plot_city_map(
     place_name: str,
     latitude: float,
     longitude: float,
     box_size_km: Union[float, int] = 2,
-    poi_tags: Optional[Dict[str, Union[bool, str, list[str]]]] = None
+    poi_tags: Optional[Dict[str, Union[bool, str, list[str]]]] = None,
 ) -> None:
-
     """
     show a matplotlib plot of features around place_name centered at (latitude, longitude), \
         with bounding box dimensions box_size_km*box_size_km
