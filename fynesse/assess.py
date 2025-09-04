@@ -1,4 +1,4 @@
-from typing import Any, Union
+from typing import Any, Union, Tuple, Dict, Optional, cast
 import matplotlib.pyplot as plt
 import math
 import osmnx as ox
@@ -118,7 +118,7 @@ def labelled(data: Union[pd.DataFrame, Any]) -> Union[pd.DataFrame, Any]:
     raise NotImplementedError
 
 
-def get_box(latitude, longitude, box_size_km=2):
+def get_box(latitude:float, longitude:float, box_size_km:Union[float, int]=2) -> Tuple[float, float, float, float]:
     """
     args:
         latitude in degrees
@@ -138,20 +138,27 @@ def get_box(latitude, longitude, box_size_km=2):
     bbox = (west, south, east, north)
     return bbox
 
-
-def load_default_tags():
-    # Open the YAML file and load it
+def load_default_tags() -> Dict[str, Union[bool, str, list[str]]]:
+    # Open the Defaults YAML file and load it
     defaults_file_path = os.path.join(os.path.dirname(__file__), "defaults.yml")
     print(defaults_file_path)
     with open(defaults_file_path, "r") as file:
         config = yaml.safe_load(file)
 
     # Access the DEFAULT_TAGS
-    default_tags = config["DEFAULT_TAGS"]
+    default_tags = cast(Dict[str, Union[bool, str, list[str]]], config["DEFAULT_TAGS"])
     return default_tags
 
 
-def plot_city_map(place_name, latitude, longitude, box_size_km=2, poi_tags=None):
+# def plot_city_map(place_name:str, latitude:float, longitude:float, box_size_km:Union[float, int]=2, poi_tags:Dict=None) -> None:
+def plot_city_map(
+    place_name: str,
+    latitude: float,
+    longitude: float,
+    box_size_km: Union[float, int] = 2,
+    poi_tags: Optional[Dict[str, Union[bool, str, list[str]]]] = None
+) -> None:
+
     """
     show a matplotlib plot of features around place_name centered at (latitude, longitude), \
         with bounding box dimensions box_size_km*box_size_km
