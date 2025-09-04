@@ -1,4 +1,4 @@
-## MLFC Workshop
+# MLFC Fynesse 
 
 [![Tests](https://github.com/vickruto/mlfc-fynesse/workflows/Test/badge.svg)](https://github.com/vickruto/mlfc-fynesse/actions/workflows/test.yml)
 [![Code Quality](https://github.com/vickruto/mlfc-fynesse/workflows/Code%20Quality/badge.svg)](https://github.com/vickruto/mlfc-fynesse/actions/workflows/code-quality.yml)
@@ -7,8 +7,27 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
+## Table of Contents
+1. [Lectures](#lectures)
+2. [Practicals](#practicals) 
+3. [The Fynesse Framework](#fynesse-framework)
+   - [Fynesse Paradigm Aspects](#fynesse-paradigm-aspects)
+      - [Access](#1-access)
+      - [Assess](#2-assess)
+      - [Address](#3-address) 
+   - [Fynesse Framework Structure](#framework-structure)
+   - [Modern Development Features](#modern-development-features)
+4. [Setting Up](#setting-up)
+    - [Prerequisites](#prerequisites)
+    - [Clone this repository](#clone-this-repository)
+    - [Installation](#installation)
+    - [Development Workflow](#development-workflow)
+ <!-- Upcoming: 5. Capstone Project -->
+ <!-- 6. References/Useful Links-->
+
+
 This repository contains material provided and code written during the Machine Learning Foundations Course ongoing in September 2025. 
-The course is instructed by DeepMind Professor of Machine Learning [Neil Lawrence](https://www.cst.cam.ac.uk/people/ndl21) and author of [Atomic Human](https://www.cst.cam.ac.uk/news/atomic-human-understanding-ourselves-age-ai), [@lawrenned](https://github.com/lawrennd/) ; and [Radzim Sendyka](https://science.ai.cam.ac.uk/team/radzim-sendyka), [@radzim](https://github.com/radzim), both from University of Cambridge. 
+The course is instructed by [Neil Lawrence](https://www.cst.cam.ac.uk/people/ndl21), DeepMind Professor of Machine Learning and author of [Atomic Human](https://www.cst.cam.ac.uk/news/atomic-human-understanding-ourselves-age-ai), [@lawrenned](https://github.com/lawrennd/); and [Radzim Sendyka](https://science.ai.cam.ac.uk/team/radzim-sendyka), [@radzim](https://github.com/radzim), both from University of Cambridge. 
 
 ## Lectures:
 
@@ -32,8 +51,8 @@ The course is instructed by DeepMind Professor of Machine Learning [Neil Lawrenc
 ## Fynesse Framework
 This is repository is built on the [Fynesse GitHub template repository](https://github.com/lawrennd/fynesse_template). The Fynesse framework is built for repeatabilitiy of data analysis projects. The template uses Poetry for dependency management, pytest for testing, and follows current Python development best practices.
 
-You can refer to these sources to understand more about the Fynesse Framework:
- - [Github template repository](https://github.com/lawrennd/fynesse_template)
+You can refer to these sources to learn more about the Fynesse Framework:
+ - [Github template repository README](https://github.com/lawrennd/fynesse_template/blob/main/README.md)
  - [Access, Assess and Address: A Pipeline for (Automated?) Data Science](https://inverseprobability.com/talks/notes/access-assess-address-a-pipeline-for-automated-data-science.html). Neil's talk at ECML Workshop on Automating Data Science on Sep 17, 2021 
 
 The Fynesse paradigm is inspired by experience in operational data science both in the Amazon supply chain and in the UK Covid-19 pandemic response.
@@ -44,21 +63,21 @@ The Fynesse paradigm considers three aspects to data analysis, Access, Assess, A
 ### Fynesse Paradigm Aspects
 The Fynesse paradigm considers three aspects to data analysis, `Access`, `Assess`, `Address`.
 
-#### Access
+#### 1. Access
 Ensuring you can obtain and legally use the data. This includes overcoming technical barriers (distributed systems, obscure APIs, digitization challenges) and legal barriers (IP rights, licensing, privacy). Proper access also requires documenting provenance and managing data ecosystems in a structured way.
 
 
-#### Assess
+#### 2. Assess
 Understanding the nature and quality of the data before analysis. This involves checking for missing values, outliers, encodings, and overall reliability—without tailoring to a specific question. The goal is to make repeatable, context-agnostic assessments that others can reuse.
 
 
-#### Address
+#### 3. Address
 Applying the data to the actual question or problem. This may involve building predictive models, statistical analyses, or creating visualizations and dashboards. It’s the most familiar step to researchers, as it’s where insights are derived and communicated.
 
 
 ### Framework Structure
 
-The template provides a structured approach to implementing the Fynesse framework:
+The Fynesse template provides a structured approach to implementing the Fynesse framework:
 
 ```bash
 fynesse/
@@ -97,7 +116,6 @@ If you are working in a UNIX based system (Linux or Mac) then you already have `
 # Clone the repo
 git clone https://github.com/vickruto/mlfc-fynesse.git
 cd mlfc-fynesse
-
 ```
 
 
@@ -107,11 +125,8 @@ cd mlfc-fynesse
 <summary>Option 1: Makefile</summary>
 
 ```bash
-# After creating your repository from the template:
-cd mlfc-fynesse
-
-# Install dependencies
-make install
+# Install dependencies & run tests to verify installation
+make install & make test
 ```
 
 </details> 
@@ -121,9 +136,6 @@ make install
 <summary>Option 2: Ordinary Bash</summary>
 
 ```bash
-# After creating your repository from the template:
-cd mlfc-fynesse
-
 # Install dependencies with Poetry
 poetry install
 
@@ -192,7 +204,6 @@ poetry run flake8 fynesse/
 
 
 ##### Adding Dependencies
-To add a dependency (eg pandas):
 
 ```bash
 # To add a dependency (eg pandas):
