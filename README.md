@@ -12,13 +12,12 @@ The course is instructed by DeepMind Professor of Machine Learning [Neil Lawrenc
 
 ## Lectures:
 
-
 | # | Topic | Notes | Notebook | Colab | Slides | Date |
 |---|-------|-------|---------|-------|--------|------|
-| 1 | Probability | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-01-probability.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-01-probability.slides.html) | 2025-09-01 |
-| 2 | Narratives, Science and Data | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-02-data-science-intro.html) | - | - | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-02-data-science-intro.slides.html) | 2025-09-02 |
-| 3 | Objective Functions and Gradient Descent | [Lecture](https://mlatcl.github.io/mlfc/lectures/01-03-objective-functions-and-gradient-descent.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-03-objective-functions-and-gradient-descent.slides.html) | 2025-09-03 |
-| 4 | Linear Algebra and Linear Regression | [Lecture](https://mlatcl.github.io/mlfc/lectures/02-01-linear-algebra.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-orange?logo=jupyter)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/02-01-linear-algebra.slides.html) | 2025-09-08 |
+| 1 | Probability | [![Lecture](https://img.shields.io/badge/Lecture-blue?logo=read-the-docs&logoColor=white)](https://mlatcl.github.io/mlfc/lectures/01-01-probability.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-01-probability.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-01-probability.slides.html) | 2025-09-01 |
+| 2 | Narratives, Science and Data | [![Lecture](https://img.shields.io/badge/Lecture-blue?logo=read-the-docs&logoColor=white)](https://mlatcl.github.io/mlfc/lectures/01-02-data-science-intro.html) | - | - | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-02-data-science-intro.slides.html) | 2025-09-02 |
+| 3 | Objective Functions and Gradient Descent | [![Lecture](https://img.shields.io/badge/Lecture-blue?logo=read-the-docs&logoColor=white)](https://mlatcl.github.io/mlfc/lectures/01-03-objective-functions-and-gradient-descent.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-03-objective-functions-and-gradient-descent.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/01-03-objective-functions-and-gradient-descent.slides.html) | 2025-09-03 |
+| 4 | Linear Algebra and Linear Regression | [![Lecture](https://img.shields.io/badge/Lecture-blue?logo=read-the-docs&logoColor=white)](https://mlatcl.github.io/mlfc/lectures/02-01-linear-algebra.html) | [![Nbviewer](https://img.shields.io/badge/Nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/02-01-linear-algebra.ipynb) | [![Slides](https://img.shields.io/badge/Slides-blue?logo=google-chrome)](https://mlatcl.github.io/mlfc/slides/02-01-linear-algebra.slides.html) | 2025-09-08 |
 
 
 ## Practicals: 
@@ -89,7 +88,26 @@ cd mlfc-fynesse
 
 ### Installation
 
+<details open>
+<summary>Option 1: Makefile</summary>
+
 ```bash
+# After creating your repository from the template:
+cd mlfc-fynesse
+
+# Install dependencies
+make install
+```
+</details> 
+
+
+<details> 
+<summary>Option 2: Ordinary Bash</summary>
+
+```bash
+# After creating your repository from the template:
+cd mlfc-fynesse
+
 # Install dependencies with Poetry
 poetry install
 
@@ -100,7 +118,44 @@ poetry shell
 poetry run pytest
 ```
 
+</details>
+
+
 ### Development Workflow
+
+<details open>
+<summary>Option 1: Makefile</summary>
+
+```bash
+# Install development dependencies
+make install
+
+# Run tests
+make test
+
+# Format code
+make format
+
+# Type checking
+make type-check
+
+# Linting
+make lint
+
+# Run code quality checks (format + lint + type-check)
+make quality
+
+# Run full validation (tests + format + lint + type-check)
+make check
+
+# Clean cache and build artifacts
+make clean
+```
+</details>
+
+<details>
+<summary>Option 2: Ordinary Bash</summary>
+
 ```bash
 # Install development dependencies
 poetry install --with dev
@@ -117,6 +172,7 @@ poetry run mypy fynesse/
 # Linting
 poetry run flake8 fynesse/
 ```
+</details>
 
 ##### Adding Dependencies
 To add a dependency (eg pandas):
