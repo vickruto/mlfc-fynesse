@@ -8,16 +8,17 @@
 
 
 ## Table of Contents
-1. [Lectures](#lectures)
-2. [Practicals](#practicals) 
-3. [The Fynesse Framework](#fynesse-framework)
+1. [Practical Exercises Solutions](#practicals-exercises-solutions)
+2. [Lectures](#lectures)
+3. [Practicals](#practicals) 
+4. [The Fynesse Framework](#fynesse-framework)
    - [Fynesse Paradigm Aspects](#fynesse-paradigm-aspects)
       - [Access](#1-access)
       - [Assess](#2-assess)
       - [Address](#3-address) 
    - [Fynesse Framework Structure](#framework-structure)
    - [Modern Development Features](#modern-development-features)
-4. [Setting Up](#setting-up)
+5. [Setting Up](#setting-up)
     - [Prerequisites](#prerequisites)
     - [Clone this repository](#clone-this-repository)
     - [Installation](#installation)
@@ -28,6 +29,16 @@
 
 This repository contains material provided and code written during the Machine Learning Foundations Course ongoing in September 2025. 
 The course is instructed by [Neil Lawrence](https://www.cst.cam.ac.uk/people/ndl21), DeepMind Professor of Machine Learning and author of [Atomic Human](https://www.cst.cam.ac.uk/news/atomic-human-understanding-ourselves-age-ai), [@lawrenned](https://github.com/lawrennd/); and [Radzim Sendyka](https://science.ai.cam.ac.uk/team/radzim-sendyka), [@radzim](https://github.com/radzim), both from University of Cambridge. 
+
+
+## Practicals Exercises Solutions
+
+|   | Practical | NBViewer | Colab | Progress | Date |
+|---|-----------|----------|-------|--------|------|
+| 1 | Nyeri to Cambridge - Geospatial Data and Reusability | [![nbviewer](https://img.shields.io/badge/nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.jupyter.org/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-geospatial-practical.ipynb "Open this notebook in Nbviewer") | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mlatcl/mlfc/blob/gh-pages/_notebooks/01-geospatial-practical.ipynb "Open this notebook in Colab") | 1✅, 2✅, 3✅, 4✅ | 2025-09-01 |
+| 2 | Data and Python | [![nbviewer](https://img.shields.io/badge/nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.org/github/vickruto/mlfc-fynesse/blob/main/notebooks/02_pandas_practical-progress.ipynb "Open this notebook in Nbviewer") | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vickruto/mlfc-fynesse/blob/main/notebooks/02_pandas_practical-progress.ipynb "Open this notebook in Colab") | 1.1✅, 1.2✅, 1.3✅, 1.4✅, 1.5✅, 1.6✅, 2.1✅, 2.5✅, 2.7🚧, 3.1✅, 3.2✅, 3.3✅, 3.4✅ | 2025-09-02 |
+| 3 | Dataset Joining and Access-Assess-Address Framework | | | | 2025-09-08 |
+
 
 ## Lectures:
 
