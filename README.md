@@ -23,6 +23,7 @@
     - [Clone this repository](#clone-this-repository)
     - [Installation](#installation)
     - [Development Workflow](#development-workflow)
+      - [Adding dependencies](#adding-dependencies)
  <!-- Upcoming: 5. Capstone Project -->
  <!-- 6. References/Useful Links-->
 
@@ -37,7 +38,7 @@ The course is instructed by [Neil Lawrence](https://www.cst.cam.ac.uk/people/ndl
 |---|-----------|----------|-------|--------|------|
 | 1 | Nyeri to Cambridge - Geospatial Data and Reusability | [![nbviewer](https://img.shields.io/badge/nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.org/github/vickruto/mlfc-fynesse/blob/main/notebooks/01-geospatial-practical.ipynb "Open this notebook in Nbviewer") | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vickruto/mlfc-fynesse/blob/main/notebooks/01-geospatial-practical.ipynb "Open this notebook in Colab") | 1✅, 2✅, 3✅, 4✅ | 2025-09-01 |
 | 2 | Data and Python | [![nbviewer](https://img.shields.io/badge/nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.org/github/vickruto/mlfc-fynesse/blob/main/notebooks/02_pandas_practical-progress.ipynb "Open this notebook in Nbviewer") | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vickruto/mlfc-fynesse/blob/main/notebooks/02_pandas_practical-progress.ipynb "Open this notebook in Colab") | 1.1✅, 1.2✅, 1.3✅, 1.4✅, 1.5✅, 1.6✅, 2.1✅, 2.5✅, 2.7🚧, 3.1✅, 3.2✅, 3.3✅, 3.4✅ | 2025-09-02 |
-| 3 | Dataset Joining and Access-Assess-Address Framework | | | | 2025-09-08 |
+| 3 | Dataset Joining and Access-Assess-Address Framework | [![nbviewer](https://img.shields.io/badge/nbviewer-white?logo=jupyter&logoColor=F37626&labelColor=FFFFFF&style=flat-square)](https://nbviewer.org/github/vickruto/mlfc-fynesse/blob/main/notebooks/03_dataset_joining_practical-progress.ipynb "Open this notebook in Nbviewer") | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vickruto/mlfc-fynesse/blob/main/notebooks/03_dataset_joining_practical-progress.ipynb "Open this notebook in Colab") | 1🚧, 2🚧, 3🚧, 4🚧, 5🚧, 6🚧, 7🚧, 8🚧, 9🚧, 10🚧, 11🚧 | 2025-09-08 |
 
 
 ## Lectures:
@@ -166,8 +167,11 @@ poetry run pytest
 <summary>Option 1: Makefile</summary>
 
 ```bash
-# Install development dependencies
+# Install core project dependencies
 make install
+
+# Install development dependencies
+make dev
 
 # Run tests
 make test
